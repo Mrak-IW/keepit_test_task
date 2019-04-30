@@ -1,4 +1,4 @@
-.PHONY: all clean debug 
+.PHONY: all clean debug test
 
 CC := g++
 DEBUG_FLAGS := -ggdb
@@ -16,3 +16,6 @@ ${EXEC_NAME}: ${EXEC_NAME}.cpp Makefile
 
 debug: CFLAGS+=-DDEBUG
 debug: all
+
+test:
+	@echo "a horse and a dog" | ./${EXEC_NAME}
