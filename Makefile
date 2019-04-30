@@ -10,8 +10,7 @@ all: ${EXEC_NAME}
 clean:
 	rm -rf ${EXEC_NAME}
 
-${EXEC_NAME}: ${EXEC_NAME}.cpp Makefile
-	@echo ${CFLAGS}
+${EXEC_NAME}: ${EXEC_NAME}.cpp
 	${CC} ${CFLAGS} ${EXEC_NAME}.cpp ${DEBUG_FLAGS} -o ${EXEC_NAME}
 
 debug: CFLAGS+=-DDEBUG
